@@ -1,0 +1,56 @@
+{
+  "name": "jx3macro",
+  "displayName": "剑网3 宏-补全+高亮",
+  "description": "为了一瓶醋包的这锅饺子",
+  "publisher": "PigeonMuyz",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "jx3macro",
+        "aliases": [
+          "剑三宏",
+          "剑侠情缘网络版叁宏"
+        ],
+        "extensions": [
+          ".jx3macro"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "jx3macro",
+        "scopeName": "source.jx3macro",
+        "path": "./syntaxes/jx3macro.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "jx3macro",
+        "path": "./snippets/jx3macro-snippets.json"
+      }
+    ]
+  },
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:jx3macro"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.54.0",
+    "typescript": "^4.0.0"
+  }
+}

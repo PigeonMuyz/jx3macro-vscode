@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Extension",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--extensionDevelopmentPath=${workspaceFolder}"
+            ],
+            "preLaunchTask": "npm: compile",  // 在调试之前执行 npm 任务，确保 TypeScript 编译完成
+            "outFiles": [
+                "${workspaceFolder}/out/**/*.js"  // 调试时加载编译后的 JavaScript 文件
+            ]
+        }
+    ]
+}

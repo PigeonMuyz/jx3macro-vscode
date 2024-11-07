@@ -1,0 +1,86 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "jx3macro",
+    "patterns": [
+        {
+            "include": "#castCommands"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#skills"
+        }
+    ],
+    "repository": {
+        "castCommands": {
+            "patterns": [
+                {
+                    "name": "support.function.cast.jx3macro",
+                    "match": "^/(cast|fcast)\\b"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.jx3macro",
+                    "match": "\\b(fcast|buff|skill_notin_cd|mana|desc|title|time|cast|qidian|rage|skill_energy|bufftime|energy|sun|moon|sun_power|moon_power|skill|noskill|last_skill|npclevel|nearby_enemy|yaoxing|tbuff|tnobuff|tbufftime|nobuff)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.jx3macro",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.jx3macro",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "comments": {
+            "name": "comment.line.double-slash.jx3macro",
+            "match": "//.*$"
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.control.jx3macro",
+                    "match": "\\b(buff|skill_notin_cd|mana|desc|title|time|qidian|rage|skill_energy|bufftime|energy|sun|moon|sun_power|moon_power|skill|noskill|last_skill|npclevel|nearby_enemy|yaoxing|tbuff|tnobuff|tbufftime|nobuff)\\b"
+                },
+                {
+                    "name": "constant.numeric.jx3macro",
+                    "match": "\\b[0-9]+\\b"
+                },
+                {
+                    "name": "variable.parameter.jx3macro",
+                    "match": "(?<=\\b(fcast|buff|skill|tbufftime|npclevel|nearby_enemy|title|nobuff|skill_notin_cd|mana|bufftime)[:=])([^:><=&|\\s\\]]+)"
+                }
+            ]
+        },
+        "skills": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.skill.jx3macro",
+                    "match": "(?<=\\b(cast|fcast)\\s)([^\\s\\[]+)"
+                },
+                {
+                    "name": "entity.name.function.skill.jx3macro",
+                    "match": "(?<=\\]\\s)([^\\s]+)$"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.jx3macro"
+}

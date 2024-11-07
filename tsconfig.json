@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                           // 将代码编译成 ES6 标准
+      "module": "CommonJS",                      // 使用 CommonJS 模块系统
+      "outDir": "./out",                         // 输出目录
+      "rootDir": "./src",                        // 输入源文件目录
+      "strict": true,                            // 启用严格模式
+      "esModuleInterop": true,                   // 允许默认导入非模块导出的代码
+      "skipLibCheck": true,                      // 跳过库文件的类型检查
+      "forceConsistentCasingInFileNames": true,  // 文件名一致性检查
+      "types": ["vscode"]                        // 确保包含 vscode 类型声明
+    },
+    "include": [
+      "src/**/*.ts"                              // 包括所有的 .ts 文件
+    ],
+    "exclude": [
+      "node_modules"                             // 排除 node_modules 文件夹
+    ]
+  }
+  

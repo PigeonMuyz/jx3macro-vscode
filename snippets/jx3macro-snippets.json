@@ -1,0 +1,147 @@
+{
+    "无打断释放（有条件）": {
+        "prefix": "/cast",
+        "body": "/cast [${1:判断表达式}] ${2:技能名}",
+        "description": "cast会依次释放，不会打断正常技能读条"
+    },
+    "强打断释放（有条件）": {
+        "prefix": "/fcast",
+        "body": "/fcast [${1:判断表达式}] ${2:技能名}",
+        "description": "fcast会强行释放，会在公CD之后强行打断正常技能读条"
+    },
+    "无打断释放": {
+        "prefix": "/cast",
+        "body": "/cast ${1:技能名}",
+        "description": "cast会依次释放，不会打断正常技能读条"
+    },
+    "强打断释放": {
+        "prefix": "/fcast",
+        "body": "/fcast ${1:技能名}",
+        "description": "fcast会强行释放，会在公CD之后强行打断正常技能读条"
+    },
+    "含某技能/奇穴": {
+        "prefix": "skill",
+        "body": "skill:${1:数字ID}",
+        "description": "判断自己身上存在某技能或奇穴（仅限技能或奇穴数字ID）"
+    },
+    "不含某技能/奇穴": {
+        "prefix": "noskill",
+        "body": "noskill:${1:数字ID}",
+        "description": "判断自己身上不存在某技能或奇穴（仅限技能或奇穴数字ID）"
+    },
+    "药性": {
+        "prefix": "yaoxing",
+        "body": "yaoxing${1:判断符}${2:数量}",
+        "description": "判断自身的药性点数（范围：-5~5；-5为5点寒性；5为5点温性；0为中性）"
+    },
+    "技能是否在调息": {
+        "prefix": "skill_notin_cd",
+        "body": "skill_notin_cd:${1:技能名}",
+        "description": "判断技能是否不在调息中，当技能不在调息时条件成立，在调息中时条件不成立"
+    },
+    "与目标距离": {
+        "prefix": "nearby_enemy",
+        "body": "nearby_enemy${1:判断符}${2:距离}",
+        "description": "判断自身周围3.0尺以内（0~2.9尺）敌人的数量是多少"
+    },
+    "NPC强度等级": {
+        "prefix": "npclevel",
+        "body": "npclevel=${1:强度等级}",
+        "description": "判断目标NPC强度等级是多少(1-6，其中6为boss）"
+    },
+    "上一次释放的技能": {
+        "prefix": "last_skill",
+        "body": "last_skill${1:判断符}${2:技能名}",
+        "description": "判定该宏最后一次可成功释放的技能（仅能为~=或=）"
+    },
+    "技能充能": {
+        "prefix": "skill_energy",
+        "body": "skill_energy:${1:技能名}${2:判断符}${3:数量}",
+        "description": "判断充能技能的当前充能层数是多少，max 表示最大能量数"
+    },
+    "满日灵": {
+        "prefix": "sun_power",
+        "body": "sun_power",
+        "description": "判断自身日灵值（明教）处于充盈状态"
+    },
+    "满月魂": {
+        "prefix": "moon_power",
+        "body": "moon_power",
+        "description": "判断自身月魂值（明教）处于充盈状态"
+    },
+    "日灵": {
+        "prefix": "sun",
+        "body": "sun${1:判断符}${2:条件}",
+        "description": "判断自身日灵值（明教）"
+    },
+    "月魂": {
+        "prefix": "moon",
+        "body": "moon${1:判断符}${2:条件}",
+        "description": "判断自身月魂值（明教）"
+    },
+    "能量": {
+        "prefix": "energy",
+        "body": "energy${1:判断符}${2:数量}",
+        "description": "判断自身能量值（唐门）/双刀(竹雾体态)刀气值（霸刀）/挡格值（苍云）/锐意值（刀宗）/点染（花间）/醉意（怀旧服丐帮）"
+    },
+    "气点": {
+        "prefix": "qidian",
+        "body": "qidian${1:判断符}${2:数量}",
+        "description": "判断自身气点（纯阳）/禅那（少林）/剑舞值（七秀）"
+    },
+    "剑气": {
+        "prefix": "rage",
+        "body": "rage${1:判断符}${2:数量}",
+        "description": "判断自身剑气值（藏剑）/长刀(尘身体态)刀气值（霸刀）/战意值（天策）/怒气（苍云）/星运值（衍天）/墨意值（万花）/弓箭（万灵）/连击（怀旧服丐帮）"
+    },
+    "蓝": {
+        "prefix": "mana",
+        "body": "mana${1:判断符}${2:数量}",
+        "description": "判断蓝量（条件只能是小数，1为满蓝）"
+    },
+    "血": {
+        "prefix": "life",
+        "body": "life${1:判断符}${2:数量}",
+        "description": "判断血量（条件只能是小数，1为满蓝）"
+    },
+    "BUFF持续时间": {
+        "prefix": "bufftime",
+        "body": "bufftime:${1:buff名}${2:判断符}${3:数量}",
+        "description": "判断自己身上某增益或减益buff 持续时间（支持数字ID）"
+    },
+    "不含buff": {
+        "prefix": "nobuff",
+        "body": "nobuff:${1:buff名}",
+        "description": "判断自己身上不存在某增益或减益buff（仅支持buff名称）"
+    },
+    "含buff": {
+        "prefix": "buff",
+        "body": "buff:${1:buff名}",
+        "description": "判断自己身上存在某增益或减益buff（仅支持buff名称）"
+    },
+    "判断buff层数": {
+        "prefix": "buff",
+        "body": "buff:${1:buff名}${2:判断符}${3:数量}",
+        "description": "判断自己身上存在某增益或减益buff的层数（仅支持buff名称）"
+    },
+    "目标身上BUFF持续时间": {
+        "prefix": "tbufftime",
+        "body": "tbufftime:${1:buff名}${2:判断符}${3:数量}",
+        "description": "判断目标身上某增益或减益buff 持续时间（支持数字ID）"
+    },
+    "目标身上不含buff": {
+        "prefix": "tnobuff",
+        "body": "tnobuff:${1:buff名}",
+        "description": "判断目标身上不存在某增益或减益buff（仅支持buff名称）"
+    },
+    "目标身上含buff": {
+        "prefix": "tbuff",
+        "body": "tbuff:${1:buff名}",
+        "description": "判断目标身上存在某增益或减益buff（仅支持buff名称）"
+    },
+    "目标判断buff层数": {
+        "prefix": "tbuff",
+        "body": "tbuff:${1:buff名}${2:判断符}${3:数量}",
+        "description": "判断目标身上存在某增益或减益buff的层数（仅支持buff名称）"
+    }
+}
